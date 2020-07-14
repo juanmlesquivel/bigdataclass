@@ -6,6 +6,7 @@ RUN apk add bash && \
   apk add python3 && \
   pip3 install --upgrade pip && \
   pip3 install pyspark && \
+  pip3 install pytest && \
   ln /usr/bin/python3.7 /usr/bin/python
 
 WORKDIR /src
