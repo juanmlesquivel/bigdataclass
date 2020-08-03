@@ -9,10 +9,17 @@ RUN apk add bash && \
   apk add python3 && \
   apk add python3-dev && \
   apk add libffi-dev && \
-  pip3 install --upgrade pip && \
+  apk add openblas-dev && \
+  apk add zlib-dev && \
+  apk add jpeg-dev && \
+  pip3 install --upgrade pip setuptools wheel && \
+  pip3 install numpy && \
+  pip3 install matplotlib && \
+  pip3 install seaborn && \
   pip3 install pyspark && \
   pip3 install pytest && \
   pip3 install notebook && \
+  pip3 install findspark && \
   ln /usr/bin/python3.7 /usr/bin/python
 
 WORKDIR /src
